@@ -15,4 +15,10 @@ class UsersController < ApplicationController
     render plain: confirmation_text
   end
 
+  def login
+    email = params[:email]
+    password = params[:password]
+    identified_user = User.where( "email = ? AND password = ?", email, password ).to_a
+    render plain: !identified_user.empty?
+  end
 end
