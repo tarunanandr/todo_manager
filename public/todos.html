@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="reset.css" />
+    <link rel="stylesheet" type="text/css" href="todo-app.css" />
+    <title>Todo Management App</title>
+  </head>
+
+  <body>
+    <article>
+      <h1 class="TodoPageTitle">My Todo-list</h1>
+
+      <section class="AddTodo">
+        <input class="AddTodo-text" type="text" placeholder="What's next?" />
+        <input class="AddTodo-date" type="date" />
+        <input class="AddTodo-button" type="button" value="Add" />
+      </section>
+
+      <section class="TodoSection">
+        <div class="TodoTitle">
+          <h2 class="TodoTitle-text">Due Today</h2>
+          <p class="TodoTitle-count">0/4</p>
+        </div>
+
+        <ul>
+          <li class="TodoItem">
+            <input class="TodoItem-checkbox" type="checkbox" />
+            <p class="TodoItem-text">Submit SAAS Project</p>
+            <p class="TodoItem-overdue">Overdue</p>
+            <a class="TodoItem-deletebox" href="javascript:void(0)">
+              <img class="TodoItem-deletebox" src="delete.svg" />
+            </a>
+          </li>
+
+          <li class="TodoItem">
+            <input class="TodoItem-checkbox" type="checkbox" />
+            <p class="TodoItem-text">Call accountant</p>
+            <a class="TodoItem-deletebox" href="javascript:void(0)">
+              <img class="TodoItem-deletebox" src="delete.svg" />
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="TodoSection">
+        <div class="TodoTitle">
+          <h2 class="TodoTitle-text">Due Tomorrow</h2>
+          <p class="TodoTitle-count">0/3</p>
+        </div>
+
+        <ul>
+          <li class="TodoItem">
+            <input class="TodoItem-checkbox" type="checkbox" />
+            <p class="TodoItem-text">Refill Groceries</p>
+            <a class="TodoItem-deletebox" href="javascript:void(0)">
+              <img class="TodoItem-deletebox" src="delete.svg" />
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="TodoSection">
+        <div class="TodoTitle">
+          <h2 class="TodoTitle-text">Remaining</h2>
+          <p class="TodoTitle-count">0/3</p>
+        </div>
+
+        <ul>
+          <li class="TodoItem">
+            <input class="TodoItem-checkbox" type="checkbox" />
+            <p class="TodoItem-text">Type something</p>
+            <p class="TodoItem-date">Jan 21</p>
+            <a href="javascript:void(0)">
+              <img class="TodoItem-deletebox" src="delete.svg" />
+            </a>
+          </li>
+
+          <li class="TodoItem">
+            <input class="TodoItem-checkbox" type="checkbox" />
+            <p class="TodoItem-text">Type something</p>
+            <p class="TodoItem-date">Jan 22</p>
+            <a href="javascript:void(0)">
+              <img class="TodoItem-deletebox" src="delete.svg" />
+            </a>
+          </li>
+
+          <li class="TodoItem">
+            <input class="TodoItem-checkbox" type="checkbox" />
+            <p class="TodoItem-text">Type something</p>
+            <p class="TodoItem-date">Jan 23</p>
+            <a href="javascript:void(0)">
+              <img class="TodoItem-deletebox" src="delete.svg" />
+            </a>
+          </li>
+        </ul>
+      </section>
+    </article>
+  </body>
+</html>
