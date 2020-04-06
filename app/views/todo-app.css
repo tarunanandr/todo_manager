@@ -90,10 +90,10 @@ body {
   margin-right: 10px;
 }
 
-.TodoItem-overdue {
+.TodoItem-duedate {
   font-size: 12px;
   line-height: 17px;
-  color: #c53030;
+  color: #848484;
   margin-right: 10px;
 }
 
