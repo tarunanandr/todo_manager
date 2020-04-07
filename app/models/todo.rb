@@ -1,5 +1,3 @@
-require "active_record"
-
 class Todo < ActiveRecord::Base
   def to_pleasant_string
     is_completed = completed ? "[X]" : "[ ]"
