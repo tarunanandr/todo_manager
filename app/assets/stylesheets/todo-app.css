@@ -105,8 +105,8 @@ body {
 }
 
 .TodoItem-deletebox {
-  width: 8.6px;
-  height: 12.2px;
+  width: 12px;
+  height: 16px;
   display: flex;
   align-items: center;
   visibility: hidden;
