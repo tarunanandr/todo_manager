@@ -90,6 +90,13 @@ body {
   margin-right: 10px;
 }
 
+.TodoItem-textlinethrough {
+  font-size: 14px;
+  line-height: 19px;
+  margin-right: 10px;
+  text-decoration: line-through;
+}
+
 .TodoItem-duedate {
   font-size: 12px;
   line-height: 17px;
