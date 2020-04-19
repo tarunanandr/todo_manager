@@ -1,0 +1,33 @@
+.UserSignup {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.UserSignup-Welcome {
+  margin-bottom: 60px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.Credentials {
+  font-size: 16px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.Credentials-field {
+  margin-bottom: 20px;
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid #bfb8cc;
+}
+
+.Credentials-submit {
+  background-color: #48bb78;
+  border-radius: 4px;
+  border-color: transparent;
+  color: white;
+  font-size: 16px;
+  margin: 16px auto;
+}
