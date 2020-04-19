@@ -9,5 +9,6 @@ class UsersController < ApplicationController
     email = params[:email]
     password = params[:password]
     User.create!(firstname: first_name, lastname: last_name, email: email, password: password)
+    redirect_to "/"
   end
 end
