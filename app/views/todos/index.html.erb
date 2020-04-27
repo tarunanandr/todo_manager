@@ -1,4 +1,6 @@
 <article>
+  <%= @current_user.firstname%>
+  <%= link_to "Sign-out", destroy_session_path, method: "delete"%>
   <h1 class="TodoPageTitle">My Todo-list</h1>
 
   <%= form_with(url: "/todos", method: "post", class: "AddTodo") do %>
@@ -8,9 +10,9 @@
   <% end %>
 
   <%= render partial: "todos-section",
-      locals: { section_title: "Overdue", todos: Todo.overdue } %>
+      locals: { section_title: "Overdue", todos: @todos.overdue } %>
   <%= render partial: "todos-section",
-      locals: { section_title: "Due Today", todos: Todo.duetoday } %>
+      locals: { section_title: "Due Today", todos: @todos.duetoday } %>
   <%= render partial: "todos-section",
-      locals: { section_title: "Due Later", todos: Todo.duelater } %>
+      locals: { section_title: "Due Later", todos: @todos.duelater } %>
 </article>
