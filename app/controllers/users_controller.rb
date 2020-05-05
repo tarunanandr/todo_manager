@@ -11,9 +11,8 @@ class UsersController < ApplicationController
     email = params[:email]
     password = params[:password]
     user = User.new(firstname: first_name, lastname: last_name, email: email, password: password)
-    user.save
-    flash[:error] = user.errors.full_messages.join(", ")
-    if flash[:error]
+    unless user.save
+      flash[:error] = user.errors.full_messages.join(", ")
       redirect_back(fallback_location: "users/new") and return
     end
     session[:current_user_id] = user.id
