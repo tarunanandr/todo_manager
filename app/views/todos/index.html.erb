@@ -1,6 +1,4 @@
 <article>
-  <%= @current_user.firstname%>
-  <%= link_to "Sign-out", destroy_session_path, method: "delete"%>
   <h1 class="TodoPageTitle">My Todo-list</h1>
 
   <%= form_with(url: "/todos", method: "post", class: "AddTodo") do %>

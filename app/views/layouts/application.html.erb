@@ -10,6 +10,15 @@
   </head>
 
   <body>
+    <% if @current_user %>
+      <section class = "UserDetails">
+        <p class = "LoggedUser"> <%= @current_user.firstname%> </p>
+        <p class = "SignOut-link"> <%= link_to "Sign-out", destroy_session_path, method: "delete"%> </p>
+      </section>
+    <% end %>
+
+    <p class = "ErrorMessage"> <%= flash[:error] %> </p>
+
     <%= yield %>
   </body>
 </html>

@@ -10,7 +10,12 @@ class UsersController < ApplicationController
     last_name = params[:last_name]
     email = params[:email]
     password = params[:password]
-    user = User.create!(firstname: first_name, lastname: last_name, email: email, password: password)
+    user = User.new(firstname: first_name, lastname: last_name, email: email, password: password)
+    user.save
+    flash[:error] = user.errors.full_messages.join(", ")
+    if flash[:error]
+      redirect_back(fallback_location: "users/new") and return
+    end
     session[:current_user_id] = user.id
     redirect_to "/"
   end

@@ -1,6 +1,10 @@
 class Todo < ApplicationRecord
   belongs_to :user
 
+  validates :todo_text, presence: true
+  validates :todo_text, length: { minimum: 2 }
+  validates :due_date, presence: true
+
   def to_pleasant_string
     is_completed = completed ? "[X]" : "[ ]"
     "#{id}. #{due_date.to_s(:short)} #{todo_text} #{is_completed}"
@@ -24,29 +28,5 @@ class Todo < ApplicationRecord
 
   def self.completed
     where("completed = ?", true)
-  end
-
-  def self.show_list
-    puts "My Todo-list\n\n"
-    puts "Overdue\n"
-    puts overdue.map { |todo| todo.to_displayable_string }
-    puts "\n\n"
-    puts "Due Today\n"
-    puts duetoday.map { |todo| todo.to_displayable_string }
-    puts "\n\n"
-    puts "Due Later\n"
-    puts duelater.map { |todo| todo.to_displayable_string }
-    puts "\n\n"
-  end
-
-  def self.add_task(h)
-    create!(todo_text: h[h.keys[0]], due_date: Date.today + h[h.keys[1]], completed: false)
-  end
-
-  def self.mark_as_complete!(todo_id)
-    todo = find(todo_id)
-    todo.completed = true
-    todo.save
-    return todo
   end
 end

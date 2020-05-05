@@ -1,10 +1,10 @@
 .UserSign_Up_In {
-  max-width: 300px;
+  max-width: 425px;
   margin: 0 auto;
 }
 
 .PageTitle {
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   font-size: 24px;
   font-weight: 600;
   line-height: 1.2;
@@ -20,6 +20,7 @@
   margin-bottom: 20px;
   padding: 6px;
   border-radius: 4px;
+  width: 225px;
   border: 1px solid #bfb8cc;
 }
 
@@ -29,5 +30,31 @@
   border-color: transparent;
   color: white;
   font-size: 16px;
-  margin: 16px auto;
+  margin: 0px 100px;
+}
+
+.UserDetails {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  background-color: whitesmoke;
+  height: 30px;
+  border-radius: 4px;
+}
+
+.LoggedUser {
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.SignOut-link {
+  margin-left: 280px;
+  font-size: 14px;
+}
+
+.ErrorMessage {
+  margin-bottom: 10px;
+  line-height: 1.2;
+  font-size: 16px;
+  color: red;
 }
